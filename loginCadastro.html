@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="loginCadastro.css" />
+    <title>NexToken | Entrar ou Cadastrar</title>
+    <style></style>
+  </head>
+  <body>
+    <div class="container" id="auth-form">
+      <h2 id="form-title">Entrar na NexToken</h2>
+
+      <form id="loginForm">
+        <label for="email">Email</label>
+        <input
+          type="email"
+          id="email"
+          placeholder="seuemail@exemplo.com"
+          required
+        />
+
+        <label for="senha">Senha</label>
+        <input type="password" id="senha" placeholder="********" required />
+
+        <button class="btn" type="submit">Entrar</button>
+      </form>
+
+      <form id="registerForm" style="display: none">
+        <label for="nome">Nome completo</label>
+        <input type="text" id="nome" placeholder="Seu nome" required />
+
+        <label for="emailCadastro">Email</label>
+        <input
+          type="email"
+          id="emailCadastro"
+          placeholder="seuemail@exemplo.com"
+          required
+        />
+
+        <label for="senhaCadastro">Senha</label>
+        <input
+          type="password"
+          id="senhaCadastro"
+          placeholder="Crie uma senha"
+          required
+        />
+
+        <button class="btn" type="submit">Cadastrar</button>
+      </form>
+
+      <div class="toggle">
+        <p id="toggleText">
+          Ainda não tem conta?
+          <a href="#" onclick="toggleForms()">Cadastre-se</a>
+        </p>
+      </div>
+    </div>
+
+    <script>
+      const loginForm = document.getElementById('loginForm');
+      const registerForm = document.getElementById('registerForm');
+      const toggleText = document.getElementById('toggleText');
+      const formTitle = document.getElementById('form-title');
+
+      function toggleForms() {
+        if (loginForm.style.display === 'none') {
+          loginForm.style.display = 'block';
+          registerForm.style.display = 'none';
+          toggleText.innerHTML =
+            'Ainda não tem conta? <a href="#" onclick="toggleForms()">Cadastre-se</a>';
+          formTitle.textContent = 'Entrar na NexToken';
+        } else {
+          loginForm.style.display = 'none';
+          registerForm.style.display = 'block';
+          toggleText.innerHTML =
+            'Já tem conta? <a href="#" onclick="toggleForms()">Entrar</a>';
+          formTitle.textContent = 'Cadastrar na NexToken';
+        }
+      }
+    </script>
+  </body>
+</html>

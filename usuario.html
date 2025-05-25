@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>NexToken | Área do Usuário</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+      color: #f5f5f5;
+    }
+
+    header {
+      background-color: #111920;
+      padding: 30px 20px;
+      text-align: center;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.5);
+    }
+
+    header h1 {
+      font-size: 2rem;
+      color: #00ffe5;
+      letter-spacing: 1px;
+    }
+
+    .dashboard {
+      max-width: 1200px;
+      margin: 40px auto;
+      padding: 0 20px;
+      display: grid;
+      gap: 20px;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    }
+
+    .card {
+      background: #1c2b36;
+      border-radius: 16px;
+      padding: 25px;
+      box-shadow: 0 0 15px rgba(0, 255, 229, 0.05);
+      transition: all 0.3s ease-in-out;
+    }
+
+    .card:hover {
+      box-shadow: 0 0 25px rgba(0, 255, 229, 0.2);
+      transform: scale(1.01);
+    }
+
+    .card h2 {
+      font-size: 1rem;
+      font-weight: 600;
+      margin-bottom: 12px;
+      color: #00ffe5;
+    }
+
+    .token-amount {
+      font-size: 2rem;
+      font-weight: bold;
+      color: #ffffff;
+      margin-bottom: 10px;
+    }
+
+    .actions button {
+      margin-top: 10px;
+      width: 100%;
+      padding: 12px;
+      background: linear-gradient(to right, #00ffe5, #00aaff);
+      color: #0e1a22;
+      border: none;
+      border-radius: 8px;
+      font-weight: bold;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .actions button:hover {
+      background: linear-gradient(to right, #00aaff, #005577);
+    }
+
+    .ref-link {
+      background: #16222A;
+      padding: 10px;
+      border-radius: 8px;
+      word-break: break-all;
+      font-size: 0.9rem;
+      color: #bbb;
+      border: 1px dashed #00ffe5;
+    }
+
+    .actions button,
+.dashboard .card button {
+  margin-top: 15px;
+  width: 100%;
+  padding: 14px;
+  background: linear-gradient(270deg, #00ffe5, #00aaff, #00ffe5);
+  background-size: 600% 600%;
+  color: #0e1a22;
+  border: none;
+  border-radius: 12px;
+  font-weight: 700;
+  font-size: 1.1rem;
+  cursor: pointer;
+  box-shadow: 0 0 8px #00ffe5;
+  transition: background-position 3s ease, box-shadow 0.3s ease;
+}
+
+.actions button:hover,
+.dashboard .card button:hover {
+  background-position: 100% 0;
+  box-shadow: 0 0 20px #00aaff;
+}
+
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 1.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Área do Usuário — NexToken</h1>
+  </header>
+
+  <section class="dashboard">
+
+    <div class="card">
+      <h2>Saldo em Tokens</h2>
+      <p class="token-amount">12.300 NTX</p>
+    </div>
+
+    <div class="card">
+      <h2>Ganhos Estimados</h2>
+      <p class="token-amount">R$ 1.230,00</p>
+    </div>
+
+    <div class="card actions">
+      <h2>Ações</h2>
+      <button>Investir</button>
+      <button>Sacar</button>
+    </div>
+
+    <div class="card">
+      <h2>Link de Indicação</h2>
+      <div class="ref-link">
+        https://nextoken.io/indique/usuario123
+      </div>
+    </div>
+
+  </section>
+
+  <!-- ... (continuação do código anterior) -->
+
+</section>
+
+<!-- Seção de Investimento -->
+<section class="dashboard" style="margin-top: 60px;">
+
+  <div style="grid-column: 1 / -1;">
+    <h1 style="text-align: center; margin-bottom: 20px; color: #00ffe5;">Planos de Investimento</h1>
+  </div>
+
+  <div class="card">
+    <h2>Plano Iniciante</h2>
+    <p style="font-size: 1.2rem; margin-bottom: 10px;">Rendimento: 5% ao mês</p>
+    <p style="color: #ccc;">Investimento mínimo: R$ 100</p>
+    <p style="color: #ccc;">Duração: 30 dias</p>
+    <button style="margin-top: 15px;">Investir Agora</button>
+  </div>
+
+  <div class="card">
+    <h2>Plano Intermediário</h2>
+    <p style="font-size: 1.2rem; margin-bottom: 10px;">Rendimento: 8% ao mês</p>
+    <p style="color: #ccc;">Investimento mínimo: R$ 500</p>
+    <p style="color: #ccc;">Duração: 60 dias</p>
+    <button style="margin-top: 15px;">Investir Agora</button>
+  </div>
+
+  <div class="card">
+    <h2>Plano Avançado</h2>
+    <p style="font-size: 1.2rem; margin-bottom: 10px;">Rendimento: 12% ao mês</p>
+    <p style="color: #ccc;">Investimento mínimo: R$ 1000</p>
+    <p style="color: #ccc;">Duração: 90 dias</p>
+    <button style="margin-top: 15px;">Investir Agora</button>
+  </div>
+
+</section>
+
+</body>
+</html>
+
+
+</body>
+</html>
